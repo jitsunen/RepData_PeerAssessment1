@@ -205,27 +205,8 @@ steps.df &lt;- read.csv(&quot;activity.csv&quot;)</code></pre>
 mean.before &lt;- mean(steps.bydate$total)
 median.after &lt;- median(steps.imputed.bydate$total)
 median.before &lt;- median(steps.bydate$total)</code></pre>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Measure</th>
-<th align="left">Value After Imputation</th>
-<th align="left">Value Before Imputation</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Mean</td>
-<td align="left">10766.19</td>
-<td align="left">9354.23</td>
-</tr>
-<tr class="even">
-<td align="left">Median</td>
-<td align="left">10766.19</td>
-<td align="left">10395</td>
-</tr>
-</tbody>
-</table>
+<p>Mean after imputation is 10766.19. Mean before imputation is 9354.23. Difference between the means is 1411.96.</p>
+<p>Median after imputation is 10766.19. Median before imputation is 10395. Difference between the medians is 371.19.</p>
 <p>Both mean and median have increased after imputation. Mean and median, after imputation, are equal implying that the distribution now is symmetric around the mean.</p>
 </div>
 </div>

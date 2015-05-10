@@ -138,11 +138,10 @@ mean.before <- mean(steps.bydate$total)
 median.after <- median(steps.imputed.bydate$total)
 median.before <- median(steps.bydate$total)
 ```
+ 
+Mean after imputation is `r format(round(mean.after, 2), scientific=4)`. Mean before imputation is `r format(round(mean.before, 2), scientific=4)`. Difference between the means is `r format(round(mean.after - mean.before, 2), scientific=4)`.
 
-Measure | Value After Imputation | Value Before Imputation | Difference 
------|--------|------
-Mean | `r format(round(mean.after, 2), scientific=4)` |`r format(round(mean.before, 2), scientific=4)`|`r format(round(mean.after - mean.before, 2), scientific=4)`
-Median| `r format(round(median.after, 2), scientific=4)`|`r format(round(median.before, 2), scientific=4)`| `r format(round(median.after - median.before, 2), scientific=4)` 
+Median after imputation is `r format(round(median.after, 2), scientific=4)`. Median before imputation is `r format(round(median.before, 2), scientific=4)`. Difference between the medians is `r format(round(median.after - median.before, 2), scientific=4)`. 
 
 Both mean and median have increased after imputation. Mean and median, after imputation, are equal implying that the distribution now is symmetric around the mean.
 

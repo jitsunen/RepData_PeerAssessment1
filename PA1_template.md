@@ -214,11 +214,10 @@ mean.before <- mean(steps.bydate$total)
 median.after <- median(steps.imputed.bydate$total)
 median.before <- median(steps.bydate$total)
 ```
+ 
+Mean after imputation is 10766.19. Mean before imputation is 9354.23. Difference between the means is 1411.96.
 
-Measure | Value After Imputation | Value Before Imputation | Difference 
------|--------|------
-Mean | 10766.19 |9354.23|1411.96
-Median| 10766.19|10395| 371.19 
+Median after imputation is 10766.19. Median before imputation is 10395. Difference between the medians is 371.19. 
 
 Both mean and median have increased after imputation. Mean and median, after imputation, are equal implying that the distribution now is symmetric around the mean.
 
