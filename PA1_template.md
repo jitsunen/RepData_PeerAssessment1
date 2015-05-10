@@ -66,7 +66,25 @@ qplot(total, data=steps.bydate, binwidth=500) +
 ![](PA1_template_files/figure-html/unnamed-chunk-6-1.png) 
 
 #### Mean and median of total steps taken per day
-Mean is 9354.23 and Median is 10395. 
+Mean is 
+
+```r
+format(round(mean(steps.bydate$total), 2), scientific=4)
+```
+
+```
+## [1] "9354.23"
+```
+
+and Median is 
+
+```r
+format(round(median(steps.bydate$total), 2), scientific=4)
+```
+
+```
+## [1] "10395"
+```
 
 ## What is the average daily activity pattern?
 #### Find average steps taken by Interval across all days
@@ -83,7 +101,7 @@ qplot(interval, Mean, data=steps.byinterval, geom="line") +
   ggtitle("Time Series of Average Steps Taken")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-8-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-10-1.png) 
 
 #### Plot time series of Log(Average Steps taken) by Interval, to amplify small variations and dampen larger ones.
 
@@ -94,7 +112,7 @@ qplot(interval, log(Mean + 1), data=steps.byinterval, geom="line") +
   ggtitle("Time Series of Log(Average Steps Taken)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-9-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
 
 #### Find interval containing maximum number of average steps
 The interval containing the maximum number of average steps 
@@ -186,7 +204,7 @@ qplot(total, data=steps.imputed.bydate, binwidth=500) +
   ggtitle("Histogram of Steps Taken (after imputation)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-19-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-21-1.png) 
 
 #### Find mean and median of total steps taken per day
 
@@ -196,6 +214,7 @@ mean.before <- mean(steps.bydate$total)
 median.after <- median(steps.imputed.bydate$total)
 median.before <- median(steps.bydate$total)
 ```
+
 Measure | Value After Imputation | Value Before Imputation | Difference 
 -----|--------|------
 Mean | 10766.19 |9354.23|1411.96
@@ -228,4 +247,4 @@ qplot(interval, Mean, data=steps.imputed.byinterval, geom="line") +
      ggtitle("Time Series of Average Steps Taken By Day Type")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-23-1.png) 
+![](PA1_template_files/figure-html/unnamed-chunk-25-1.png) 

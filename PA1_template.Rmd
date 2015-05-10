@@ -43,7 +43,15 @@ qplot(total, data=steps.bydate, binwidth=500) +
 ```
 
 #### Mean and median of total steps taken per day
-Mean is `r format(round(mean(steps.bydate$total), 2), scientific=4)` and Median is `r format(round(median(steps.bydate$total), 2), scientific=4)`. 
+Mean is 
+```{r} 
+format(round(mean(steps.bydate$total), 2), scientific=4)
+``` 
+
+and Median is 
+```{r} 
+format(round(median(steps.bydate$total), 2), scientific=4)
+``` 
 
 ## What is the average daily activity pattern?
 #### Find average steps taken by Interval across all days
@@ -130,6 +138,7 @@ mean.before <- mean(steps.bydate$total)
 median.after <- median(steps.imputed.bydate$total)
 median.before <- median(steps.bydate$total)
 ```
+
 Measure | Value After Imputation | Value Before Imputation | Difference 
 -----|--------|------
 Mean | `r format(round(mean.after, 2), scientific=4)` |`r format(round(mean.before, 2), scientific=4)`|`r format(round(mean.after - mean.before, 2), scientific=4)`

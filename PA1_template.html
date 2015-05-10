@@ -116,7 +116,12 @@ steps.df &lt;- read.csv(&quot;activity.csv&quot;)</code></pre>
 </div>
 <div id="mean-and-median-of-total-steps-taken-per-day" class="section level4">
 <h4>Mean and median of total steps taken per day</h4>
-<p>Mean is 9354.23 and Median is 10395.</p>
+<p>Mean is</p>
+<pre class="r"><code>format(round(mean(steps.bydate$total), 2), scientific=4)</code></pre>
+<pre><code>## [1] &quot;9354.23&quot;</code></pre>
+<p>and Median is</p>
+<pre class="r"><code>format(round(median(steps.bydate$total), 2), scientific=4)</code></pre>
+<pre><code>## [1] &quot;10395&quot;</code></pre>
 </div>
 </div>
 <div id="what-is-the-average-daily-activity-pattern" class="section level2">
